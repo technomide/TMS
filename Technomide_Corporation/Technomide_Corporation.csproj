@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B62F982A-B954-4C1C-BBD3-053CBACFFECC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Technomide_Corporation</RootNamespace>
+    <AssemblyName>Technomide_Corporation</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About_form.Designer.cs">
+      <DependentUpon>About_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Attendance_Form.Designer.cs">
+      <DependentUpon>Attendance_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultants_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultants_Form.Designer.cs">
+      <DependentUpon>Consultants_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard_form.Designer.cs">
+      <DependentUpon>Dashboard_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database_Connection.cs" />
+    <Compile Include="Employee_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee_Form.Designer.cs">
+      <DependentUpon>Employee_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Expence_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Expence_Form.Designer.cs">
+      <DependentUpon>Expence_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Income_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Income_form.Designer.cs">
+      <DependentUpon>Income_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_form.Designer.cs">
+      <DependentUpon>Login_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login_Signup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_Signup.Designer.cs">
+      <DependentUpon>Login_Signup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Owner_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Owner_Form.Designer.cs">
+      <DependentUpon>Owner_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Projects_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Projects_form.Designer.cs">
+      <DependentUpon>Projects_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UC_Menu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Menu.Designer.cs">
+      <DependentUpon>UC_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Withdrawl_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Withdrawl_form.Designer.cs">
+      <DependentUpon>Withdrawl_form.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="About_form.resx">
+      <DependentUpon>About_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attendance_Form.resx">
+      <DependentUpon>Attendance_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultants_Form.resx">
+      <DependentUpon>Consultants_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard_form.resx">
+      <DependentUpon>Dashboard_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee_Form.resx">
+      <DependentUpon>Employee_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Expence_Form.resx">
+      <DependentUpon>Expence_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Income_form.resx">
+      <DependentUpon>Income_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_form.resx">
+      <DependentUpon>Login_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_Signup.resx">
+      <DependentUpon>Login_Signup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Owner_Form.resx">
+      <DependentUpon>Owner_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Projects_form.resx">
+      <DependentUpon>Projects_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UC_Menu.resx">
+      <DependentUpon>UC_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Withdrawl_form.resx">
+      <DependentUpon>Withdrawl_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\Users-Group-icon.png" />
+    <None Include="bin\Debug\Images\Project-icon.png" />
+    <Content Include="images\Project-icon.png" />
+    <Content Include="images\Users-Group-icon.png" />
+    <None Include="bin\Debug\Images\Login-in-icon.png" />
+    <None Include="bin\Debug\Images\Money-2-icon.png" />
+    <None Include="bin\Debug\Images\Tech.jpg" />
+    <None Include="bin\Debug\Images\Burger_Menu.png" />
+    <None Include="bin\Debug\Images\Cash-register-icon.png" />
+    <None Include="bin\Debug\Images\Coins-icon.png" />
+    <None Include="bin\Debug\Images\images %281%29.jpg" />
+    <None Include="bin\Debug\Images\images.jpg" />
+    <None Include="bin\Debug\Images\employee.png" />
+    <None Include="bin\Debug\Images\project.png" />
+    <None Include="bin\Debug\Images\attendance.png" />
+    <None Include="bin\Debug\Images\Bank-icon.png" />
+    <None Include="bin\Debug\Images\about.png" />
+    <None Include="bin\Debug\Images\home-icon.png" />
+    <Content Include="images\about.png" />
+    <Content Include="images\attendance.png" />
+    <Content Include="images\Bank-icon.png" />
+    <Content Include="images\Burger_Menu.png" />
+    <Content Include="images\Cash-register-icon.png" />
+    <Content Include="images\Coins-icon.png" />
+    <Content Include="images\employee.png" />
+    <Content Include="images\home-icon.png" />
+    <Content Include="images\images %281%29.jpg" />
+    <Content Include="images\images.jpg" />
+    <Content Include="images\Login-in-icon.png" />
+    <Content Include="images\Money-2-icon.png" />
+    <Content Include="images\Tech.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
