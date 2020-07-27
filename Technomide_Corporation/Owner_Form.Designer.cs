@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Owner_Form));
             this.panel_top_bar = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.LogOut_Button = new System.Windows.Forms.Button();
             this.pic_burger_menu = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label_UserName = new System.Windows.Forms.Label();
             this.panel_menu = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel_main = new System.Windows.Forms.Panel();
@@ -55,25 +55,26 @@
             // panel_top_bar
             // 
             this.panel_top_bar.BackColor = System.Drawing.Color.Transparent;
-            this.panel_top_bar.Controls.Add(this.button1);
+            this.panel_top_bar.Controls.Add(this.LogOut_Button);
             this.panel_top_bar.Controls.Add(this.pic_burger_menu);
-            this.panel_top_bar.Controls.Add(this.label1);
+            this.panel_top_bar.Controls.Add(this.label_UserName);
             this.panel_top_bar.Location = new System.Drawing.Point(12, 12);
             this.panel_top_bar.Name = "panel_top_bar";
             this.panel_top_bar.Size = new System.Drawing.Size(943, 37);
             this.panel_top_bar.TabIndex = 0;
             // 
-            // button1
+            // LogOut_Button
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(865, 9);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Logout";
-            this.button1.UseVisualStyleBackColor = false;
+            this.LogOut_Button.BackColor = System.Drawing.Color.White;
+            this.LogOut_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LogOut_Button.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LogOut_Button.Location = new System.Drawing.Point(865, 9);
+            this.LogOut_Button.Name = "LogOut_Button";
+            this.LogOut_Button.Size = new System.Drawing.Size(75, 23);
+            this.LogOut_Button.TabIndex = 3;
+            this.LogOut_Button.Text = "Logout";
+            this.LogOut_Button.UseVisualStyleBackColor = false;
+            this.LogOut_Button.Click += new System.EventHandler(this.LogOut_Button_Click);
             // 
             // pic_burger_menu
             // 
@@ -87,16 +88,16 @@
             this.pic_burger_menu.TabStop = false;
             this.pic_burger_menu.Click += new System.EventHandler(this.pic_burger_menu_Click);
             // 
-            // label1
+            // label_UserName
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(742, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 19);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Username";
+            this.label_UserName.AutoSize = true;
+            this.label_UserName.BackColor = System.Drawing.Color.Transparent;
+            this.label_UserName.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_UserName.Location = new System.Drawing.Point(742, 9);
+            this.label_UserName.Name = "label_UserName";
+            this.label_UserName.Size = new System.Drawing.Size(69, 19);
+            this.label_UserName.TabIndex = 0;
+            this.label_UserName.Text = "Username";
             // 
             // panel_menu
             // 
@@ -274,7 +275,7 @@
 
         private System.Windows.Forms.Panel panel_top_bar;
         private System.Windows.Forms.PictureBox pic_burger_menu;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label_UserName;
         private System.Windows.Forms.Panel panel_menu;
         private System.Windows.Forms.Panel panel_main;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -283,7 +284,7 @@
         private UC_Menu UC_Employee_Menu;
         private UC_Menu UC_Attendance_Menu;
         private UC_Menu UC_Dashboard_Menu;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button LogOut_Button;
         private UC_Menu UC_About_Menu;
         private UC_Menu UC_withdrawl_Menu;
         private UC_Menu UC_login_Meun;

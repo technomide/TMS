@@ -11,9 +11,9 @@ namespace Technomide_Corporation
     {
 
         public SqlConnection con;
-        public Database_Connection()
+        public Database_Connection(string conString)
         {
-            con = new SqlConnection("Data Source=DESKTOP-0VTF41Q\\SQLEXPRESS;Initial Catalog=\"School Management System\";Integrated Security=True");
+            con = new SqlConnection(conString);
         }
 
 

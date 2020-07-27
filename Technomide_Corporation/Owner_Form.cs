@@ -19,7 +19,7 @@ namespace Technomide_Corporation
 
         private void Owner_Load(object sender, EventArgs e)
         {
-
+            label_UserName.Text= Login_Signup.UserName;
             UC_Dashboard_Menu.label_function.Text = "DASHBOARD";
             UC_Attendance_Menu.label_function.Text = "Attendance";
             UC_Employee_Menu.label_function.Text = "Employees";
@@ -105,6 +105,7 @@ namespace Technomide_Corporation
         {
 
             Owner_Form own = new Owner_Form();
+
 
             if (count == 0)
             {
@@ -244,5 +245,13 @@ namespace Technomide_Corporation
             panel_menu.Hide();
             count = 0;
         }
+
+        private void LogOut_Button_Click(object sender, EventArgs e)
+        {
+            Login_Signup.LogOutStatus = true;
+            this.Close();
+        }
+
+      
     }
 }
