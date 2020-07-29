@@ -73,6 +73,16 @@ namespace Technomide_Corporation.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Add {
+            get {
+                object obj = ResourceManager.GetObject("Add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap attendance {
             get {
                 object obj = ResourceManager.GetObject("attendance", resourceCulture);
@@ -116,6 +126,26 @@ namespace Technomide_Corporation.Properties {
         internal static System.Drawing.Bitmap Coins_icon {
             get {
                 object obj = ResourceManager.GetObject("Coins_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Delete {
+            get {
+                object obj = ResourceManager.GetObject("Delete", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Delete1 {
+            get {
+                object obj = ResourceManager.GetObject("Delete1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,6 +213,16 @@ namespace Technomide_Corporation.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Person {
+            get {
+                object obj = ResourceManager.GetObject("Person", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Project_icon {
             get {
                 object obj = ResourceManager.GetObject("Project_icon", resourceCulture);
@@ -206,6 +246,16 @@ namespace Technomide_Corporation.Properties {
         internal static System.Drawing.Bitmap Tech1 {
             get {
                 object obj = ResourceManager.GetObject("Tech1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Update {
+            get {
+                object obj = ResourceManager.GetObject("Update", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

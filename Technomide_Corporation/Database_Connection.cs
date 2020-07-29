@@ -10,10 +10,10 @@ namespace Technomide_Corporation
     class Database_Connection
     {
 
-        public SqlConnection con;
+        public static SqlConnection con;
         public Database_Connection()
         {
-            con = new SqlConnection("Data Source=DESKTOP-0VTF41Q\\SQLEXPRESS;Initial Catalog=\"School Management System\";Integrated Security=True");
+            con = new SqlConnection(Login_Signup.FinalConString);
         }
 
 
