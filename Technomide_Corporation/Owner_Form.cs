@@ -19,7 +19,7 @@ namespace Technomide_Corporation
 
         private void Owner_Load(object sender, EventArgs e)
         {
-
+            label_UserName.Text = Login_Signup.UserName;
             UC_Dashboard_Menu.label_function.Text = "DASHBOARD";
             UC_Attendance_Menu.label_function.Text = "Attendance";
             UC_Employee_Menu.label_function.Text = "Employees";
@@ -29,12 +29,12 @@ namespace Technomide_Corporation
             UC_Income_Menu.label_function.Text = "Income";
             UC_login_Meun.label_function.Text = "Login Account";
             UC_withdrawl_Menu.label_function.Text = "Withdrawl";
-            UC_About_Menu.label_function.Text="About Us";
+            UC_About_Menu.label_function.Text = "About Us";
 
             panel_menu.Hide();
             panel_main.Controls.Clear();
             dash_form.TopLevel = false;
-            dash_form.Left = 200;
+            dash_form.Left = 0;
             panel_main.Controls.Add(dash_form);
             dash_form.Show();
             panel_main.Visible = true;
@@ -85,7 +85,16 @@ namespace Technomide_Corporation
             UC_Dashboard_Menu.picture_logo_uc.SizeMode = PictureBoxSizeMode.StretchImage;
             UC_CONSULTANT_MENU.picture_logo_uc.Image = Properties.Resources.Users_Group_icon;
             UC_CONSULTANT_MENU.picture_logo_uc.SizeMode = PictureBoxSizeMode.StretchImage;
-            
+
+
+            dash_form.btn_Attendance.Click += new EventHandler(UC_Attendance_Menu_Click);
+            dash_form.btn_Projects.Click += new EventHandler(UC_PROJECTS_MENU_Click);
+            dash_form.btn_Employees.Click += new EventHandler(UC_Employee_Menu_Click);
+            dash_form.btn_Consultant.Click += new EventHandler(UC_CONSULTANT_MENU_Click);
+            dash_form.btn_Expense.Click += new EventHandler(UC_Expense_Menu_Click);
+            dash_form.btn_Income.Click += new EventHandler(UC_Income_Menu_Click);
+            dash_form.btn_Accounts.Click += new EventHandler(UC_login_Meun_Click);
+
         }
 
         Expence_Form exp_form = new Expence_Form();
@@ -105,6 +114,7 @@ namespace Technomide_Corporation
         {
 
             Owner_Form own = new Owner_Form();
+
 
             if (count == 0)
             {
@@ -139,9 +149,10 @@ namespace Technomide_Corporation
 
         private void UC_Dashboard_Menu_Click(object sender, EventArgs e)
         {
+            dash_form.Calling_LoadFrom(sender, e);
             panel_main.Controls.Clear();
             dash_form.TopLevel = false;
-            dash_form.Left = 200;
+            dash_form.Left = 0;
             panel_main.Controls.Add(dash_form);
             dash_form.Show();
             panel_main.Visible = true;
@@ -152,13 +163,13 @@ namespace Technomide_Corporation
         private void UC_Attendance_Menu_Click(object sender, EventArgs e)
         {
             panel_main.Controls.Clear();
-               att_form.TopLevel = false;
-                att_form.Left = 200;
-               panel_main.Controls.Add(att_form);
-                att_form.Show();
-               panel_main.Visible = true;
-                panel_menu.Hide();
-                count = 0;
+            att_form.TopLevel = false;
+            att_form.Left = 200;
+            panel_main.Controls.Add(att_form);
+            att_form.Show();
+            panel_main.Visible = true;
+            panel_menu.Hide();
+            count = 0;
         }
 
         private void UC_Employee_Menu_Click(object sender, EventArgs e)
@@ -200,13 +211,13 @@ namespace Technomide_Corporation
         private void UC_Expense_Menu_Click(object sender, EventArgs e)
         {
             panel_main.Controls.Clear();
-              exp_form.TopLevel = false;
-               exp_form.Left = 200;
-              panel_main.Controls.Add(exp_form);
-              exp_form.Show();
-              panel_main.Visible = true;
-              panel_menu.Hide();
-                count = 0;
+            exp_form.TopLevel = false;
+            exp_form.Left = 200;
+            panel_main.Controls.Add(exp_form);
+            exp_form.Show();
+            panel_main.Visible = true;
+            panel_menu.Hide();
+            count = 0;
         }
 
         private void UC_Income_Menu_Click(object sender, EventArgs e)
@@ -243,6 +254,14 @@ namespace Technomide_Corporation
             panel_main.Visible = true;
             panel_menu.Hide();
             count = 0;
+        }
+
+      
+
+        private void LogOut_Button_Click_1(object sender, EventArgs e)
+        {
+            Login_Signup.LogOutStatus = true;
+            this.Close();
         }
     }
 }
