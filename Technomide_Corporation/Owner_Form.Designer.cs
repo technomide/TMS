@@ -34,8 +34,6 @@
             this.pic_burger_menu = new System.Windows.Forms.PictureBox();
             this.label_UserName = new System.Windows.Forms.Label();
             this.panel_menu = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel_main = new System.Windows.Forms.Panel();
             this.UC_About_Menu = new Technomide_Corporation.UC_Menu();
             this.UC_withdrawl_Menu = new Technomide_Corporation.UC_Menu();
             this.UC_login_Meun = new Technomide_Corporation.UC_Menu();
@@ -46,6 +44,8 @@
             this.UC_Employee_Menu = new Technomide_Corporation.UC_Menu();
             this.UC_Attendance_Menu = new Technomide_Corporation.UC_Menu();
             this.UC_Dashboard_Menu = new Technomide_Corporation.UC_Menu();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel_main = new System.Windows.Forms.Panel();
             this.panel_top_bar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_burger_menu)).BeginInit();
             this.panel_menu.SuspendLayout();
@@ -60,7 +60,7 @@
             this.panel_top_bar.Controls.Add(this.label_UserName);
             this.panel_top_bar.Location = new System.Drawing.Point(12, 12);
             this.panel_top_bar.Name = "panel_top_bar";
-            this.panel_top_bar.Size = new System.Drawing.Size(943, 37);
+            this.panel_top_bar.Size = new System.Drawing.Size(1192, 37);
             this.panel_top_bar.TabIndex = 0;
             // 
             // LogOut_Button
@@ -68,13 +68,13 @@
             this.LogOut_Button.BackColor = System.Drawing.Color.White;
             this.LogOut_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LogOut_Button.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LogOut_Button.Location = new System.Drawing.Point(865, 9);
+            this.LogOut_Button.Location = new System.Drawing.Point(1074, 7);
             this.LogOut_Button.Name = "LogOut_Button";
             this.LogOut_Button.Size = new System.Drawing.Size(75, 23);
             this.LogOut_Button.TabIndex = 3;
             this.LogOut_Button.Text = "Logout";
             this.LogOut_Button.UseVisualStyleBackColor = false;
-            this.LogOut_Button.Click += new System.EventHandler(this.LogOut_Button_Click);
+            this.LogOut_Button.Click += new System.EventHandler(this.LogOut_Button_Click_1);
             // 
             // pic_burger_menu
             // 
@@ -93,11 +93,11 @@
             this.label_UserName.AutoSize = true;
             this.label_UserName.BackColor = System.Drawing.Color.Transparent;
             this.label_UserName.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_UserName.Location = new System.Drawing.Point(742, 9);
+            this.label_UserName.Location = new System.Drawing.Point(906, 8);
             this.label_UserName.Name = "label_UserName";
-            this.label_UserName.Size = new System.Drawing.Size(69, 19);
+            this.label_UserName.Size = new System.Drawing.Size(98, 19);
             this.label_UserName.TabIndex = 0;
-            this.label_UserName.Text = "Username";
+            this.label_UserName.Text = "Shaikhoo1999";
             // 
             // panel_menu
             // 
@@ -116,27 +116,8 @@
             this.panel_menu.Controls.Add(this.pictureBox2);
             this.panel_menu.Location = new System.Drawing.Point(12, 55);
             this.panel_menu.Name = "panel_menu";
-            this.panel_menu.Size = new System.Drawing.Size(200, 453);
+            this.panel_menu.Size = new System.Drawing.Size(200, 592);
             this.panel_menu.TabIndex = 1;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(-1, -1);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(200, 75);
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            // panel_main
-            // 
-            this.panel_main.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_main.Location = new System.Drawing.Point(12, 55);
-            this.panel_main.Name = "panel_main";
-            this.panel_main.Size = new System.Drawing.Size(943, 453);
-            this.panel_main.TabIndex = 2;
             // 
             // UC_About_Menu
             // 
@@ -249,18 +230,38 @@
             this.UC_Dashboard_Menu.TabIndex = 1;
             this.UC_Dashboard_Menu.Click += new System.EventHandler(this.UC_Dashboard_Menu_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(-1, -1);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(200, 75);
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // panel_main
+            // 
+            this.panel_main.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_main.Location = new System.Drawing.Point(12, 55);
+            this.panel_main.Name = "panel_main";
+            this.panel_main.Size = new System.Drawing.Size(1192, 609);
+            this.panel_main.TabIndex = 2;
+            // 
             // Owner_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(967, 519);
+            this.ClientSize = new System.Drawing.Size(1216, 673);
             this.Controls.Add(this.panel_menu);
             this.Controls.Add(this.panel_top_bar);
             this.Controls.Add(this.panel_main);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Owner_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "\\";
+            this.Text = "Owner";
             this.Load += new System.EventHandler(this.Owner_Load);
             this.panel_top_bar.ResumeLayout(false);
             this.panel_top_bar.PerformLayout();

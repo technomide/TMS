@@ -32,87 +32,9 @@ namespace Technomide_Corporation
         public static string State;
         public static bool LogOutStatus;
         public static string UserName;
-        private void btn_login_Click(object sender, EventArgs e)
-        {
-            string user = textbox_username_login.Text;
-            string pass = textbox_pass_login.Text;
-            string sq = @"SELECT * FROM LoginInfoTable WHERE Username=@NewName AND Password=@NewPass";
-            try
-            {
-                SqlCommand dbCommand = new SqlCommand(sq, FinalCon);
-                dbCommand.Parameters.AddWithValue("@NewName", user);
-                dbCommand.Parameters.AddWithValue("@NewPass", pass);
+        public static string FinalConString;
 
 
-                // SqlCommand cmd = new SqlCommand("SELECT * FROM LoginInfoTable WHERE Username='" + user + "' AND Password='" + pass + "'", FinalCon);
-                FinalCon.Open();
-                SqlDataAdapter sda = new SqlDataAdapter(dbCommand);
-
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
-                FinalCon.Close();
-
-                if (dt.Rows[0][0].ToString() == "1")
-                {
-                    UserName= dt.Rows[0][1].ToString();
-                    //MessageBox.Show("Login Success " + dt.Rows[0][3].ToString());
-                    SqlCommand cmd1 = new SqlCommand("SELECT * FROM RoleTable", FinalCon);
-                    FinalCon.Open();
-                    SqlDataAdapter sda1 = new SqlDataAdapter(cmd1);
-
-                    DataTable dt1 = new DataTable();
-                    sda1.Fill(dt1);
-                    //MessageBox.Show("Login Success " + dt1.Rows[0][1].ToString());
-                    State = dt1.Rows[0][1].ToString();
-                    FinalCon.Close();
-                    this.Close();
-
-
-                    label_Status_Login.ForeColor = Color.Green;
-                    label_Status_Login.Text = "Login Success";
-
-                }
-
-
-            }
-            catch (Exception ex)
-            {
-                label_Status_Login.ForeColor = Color.Red;
-                label_Status_Login.Text = "Login Failed";
-            }
-
-
-
-
-
-
-
-            // own.Show();
-
-            //SqlDataAdapter sda = new SqlDataAdapter("select COUNT(*) from Users where username = '" + txt_login_username.Text + "' and password = '" + txt_login_pass.Text + "'", DBcon.con);
-
-            //DataTable dt = new DataTable();
-
-            //sda.Fill(dt);
-
-            //if (dt.Rows[0][0].ToString() == "1")
-            //{
-            //    cmd = DBcon.con.CreateCommand();
-            //    cmd.CommandText = "select roll_of_user from Users where username = '" + txt_login_username.Text + "' ";
-            //    DBcon.con.Open();
-            //    string result = ((string)cmd.ExecuteScalar()).ToLower();
-            //    DBcon.con.Close();
-
-            //    MessageBox.Show(result.ToUpper() + " Login Successfully ");
-
-            //    if (result == "owner")
-            //    {
-            //        own.Show();
-            //    }
-            //}
-
-
-        }
         public bool CheckDBExists(string conString)
         {
             SqlConnection Con = new SqlConnection(conString);
@@ -134,18 +56,18 @@ namespace Technomide_Corporation
             panel_login.BringToFront();
         }
 
-        private void btn_signup_Click(object sender, EventArgs e)
-        {
+        //private void btn_signup_Click(object sender, EventArgs e)
+        //{
 
-            DBcon.con.Open();
-
-
-
-            cmd.ExecuteNonQuery();
-            DBcon.con.Close();
+        //    DBcon.con.Open();
 
 
-        }
+
+        //    cmd.ExecuteNonQuery();
+        //    DBcon.con.Close();
+
+
+        //}
 
         private void Login_Signup_Load(object sender, EventArgs e)
         {
@@ -169,6 +91,8 @@ namespace Technomide_Corporation
                 panel_login.Show();
             }
         }
+
+     
 
         private void SignUp_button_Click(object sender, EventArgs e)
         {
@@ -230,7 +154,62 @@ namespace Technomide_Corporation
                 panel_login.Show();
                 label_Status_signup.ForeColor = Color.Green;
                 label_Status_signup.Text = "Registered Successfully";
+                
             }
+
+        }
+
+        private void btn_login_Click_1(object sender, EventArgs e)
+        {
+            FinalConString = conString;
+            Database_Connection conlast = new Database_Connection();
+            string user = textbox_username_login.Text;
+            string pass = textbox_pass_login.Text;
+            string sq = @"SELECT * FROM LoginInfoTable WHERE Username=@NewName AND Password=@NewPass";
+            try
+            {
+                SqlCommand dbCommand = new SqlCommand(sq, FinalCon);
+                dbCommand.Parameters.AddWithValue("@NewName", user);
+                dbCommand.Parameters.AddWithValue("@NewPass", pass);
+
+
+                // SqlCommand cmd = new SqlCommand("SELECT * FROM LoginInfoTable WHERE Username='" + user + "' AND Password='" + pass + "'", FinalCon);
+                FinalCon.Open();
+                SqlDataAdapter sda = new SqlDataAdapter(dbCommand);
+
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                FinalCon.Close();
+
+                if (dt.Rows[0][0].ToString() == "1")
+                {
+                    UserName = dt.Rows[0][1].ToString();
+                    //MessageBox.Show("Login Success " + dt.Rows[0][3].ToString());
+                    SqlCommand cmd1 = new SqlCommand("SELECT * FROM RoleTable", FinalCon);
+                    FinalCon.Open();
+                    SqlDataAdapter sda1 = new SqlDataAdapter(cmd1);
+
+                    DataTable dt1 = new DataTable();
+                    sda1.Fill(dt1);
+                    //MessageBox.Show("Login Success " + dt1.Rows[0][1].ToString());
+                    State = dt1.Rows[0][1].ToString();
+                    FinalCon.Close();
+                    this.Close();
+
+
+                    label_Status_Login.ForeColor = Color.Green;
+                    label_Status_Login.Text = "Login Success";
+
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                label_Status_Login.ForeColor = Color.Red;
+                label_Status_Login.Text = "Login Failed";
+            }
+
 
         }
     }

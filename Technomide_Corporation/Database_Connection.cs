@@ -10,10 +10,10 @@ namespace Technomide_Corporation
     class Database_Connection
     {
 
-        public SqlConnection con;
-        public Database_Connection(string conString)
+        public static SqlConnection con;
+        public Database_Connection()
         {
-            con = new SqlConnection(conString);
+            con = new SqlConnection(Login_Signup.FinalConString);
         }
 
 

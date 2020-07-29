@@ -16,7 +16,7 @@ namespace Technomide_Corporation
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-          
+
 
             do
             {
