@@ -77,7 +77,7 @@ namespace Technomide_Corporation
             Signup_panel.Hide();
 
 
-            conString = "Data Source=" + ServerName + ";Initial Catalog=TheProject;Integrated Security=True";
+            conString = "Data Source=" + ServerName + "\\SQLEXPRESS;Initial Catalog=TheProject;Integrated Security=True";
 
             if (!CheckDBExists(conString))
             {
@@ -86,7 +86,7 @@ namespace Technomide_Corporation
 
             else
             {
-                conString = "Data Source=" + ServerName + ";Initial Catalog=TheProject;Integrated Security=True";
+                conString = "Data Source=" + ServerName + "\\SQLEXPRESS;Initial Catalog=TheProject;Integrated Security=True";
                 FinalCon.ConnectionString = conString;
                 panel_login.Show();
             }
@@ -107,7 +107,7 @@ namespace Technomide_Corporation
             }
 
 
-            conString = "Data Source=" + Environment.MachineName + ";Initial Catalog=;Integrated Security=True";
+            conString = "Data Source=" + Environment.MachineName + "\\SQLEXPRESS;Initial Catalog=;Integrated Security=True";
             SqlConnection Connection = new SqlConnection(conString);
             string script = File.ReadAllText(@"script.sql");
 
@@ -127,7 +127,7 @@ namespace Technomide_Corporation
             }
 
             Connection.Close();
-            conString = "Data Source=" + ServerName + ";Initial Catalog=TheProject;Integrated Security=True";
+            conString = "Data Source=" + ServerName + "\\SQLEXPRESS;Initial Catalog=TheProject;Integrated Security=True";
             FinalCon.ConnectionString = conString;
 
             //if (pass == repass)
