@@ -10,23 +10,25 @@ using System.Windows.Forms;
 
 namespace Technomide_Corporation
 {
-    public partial class UC_Modify : UserControl
-    {
-        public UC_Modify()
-=======
+<<<<<<< HEAD:Technomide_Corporation/UC_GroupBox.cs
     public partial class UC_GroupBox : UserControl
     {
         public UC_GroupBox()
->>>>>>> FrontEnd
+=======
+    public partial class UC_Modify : UserControl
+    {
+        public UC_Modify()
+>>>>>>> FrontEnd:Technomide_Corporation/UC_Modify.cs
         {
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-=======
+<<<<<<< HEAD:Technomide_Corporation/UC_GroupBox.cs
 
         private void UC_GroupBox_Load(object sender, EventArgs e)
->>>>>>> FrontEnd
+=======
+        private void pictureBox1_Click(object sender, EventArgs e)
+>>>>>>> FrontEnd:Technomide_Corporation/UC_Modify.cs
         {
 
         }

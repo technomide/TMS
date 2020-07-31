@@ -76,6 +76,7 @@ namespace Technomide_Corporation
             panel_login.Hide();
             Signup_panel.Hide();
 
+            //Data Source=DESKTOP-0VTF41Q\SQLEXPRESS;Initial Catalog=TheProject;Integrated Security=True
 
             conString = "Data Source=" + ServerName + "\\SQLEXPRESS;Initial Catalog=TheProject;Integrated Security=True";
 
@@ -92,13 +93,14 @@ namespace Technomide_Corporation
             }
         }
 
-     
+
 
         private void SignUp_button_Click(object sender, EventArgs e)
         {
             string username = textBox_username_signup.Text;
             string pass = textBox_pass_signup.Text;
             string repass = textBox_conPass_signup.Text;
+
             if (pass != repass)
             {
                 label_Status_signup.ForeColor = Color.Red;
@@ -154,7 +156,7 @@ namespace Technomide_Corporation
                 panel_login.Show();
                 label_Status_signup.ForeColor = Color.Green;
                 label_Status_signup.Text = "Registered Successfully";
-                
+
             }
 
         }

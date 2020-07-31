@@ -176,7 +176,7 @@ namespace Technomide_Corporation
         {
             panel_main.Controls.Clear();
             emp_form.TopLevel = false;
-            emp_form.Left = 200;
+            emp_form.Left = 0;
             panel_main.Controls.Add(emp_form);
             emp_form.Show();
             panel_main.Visible = true;

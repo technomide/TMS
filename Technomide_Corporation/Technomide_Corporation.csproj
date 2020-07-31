@@ -52,6 +52,12 @@
     <Compile Include="About_form.Designer.cs">
       <DependentUpon>About_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="About_Us_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About_Us_Form.Designer.cs">
+      <DependentUpon>About_Us_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Attendance_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +121,12 @@
       <DependentUpon>Projects_form.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UC_Employee_Data.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Employee_Data.Designer.cs">
+      <DependentUpon>UC_Employee_Data.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_GroupBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -127,6 +139,12 @@
     <Compile Include="UC_Menu.Designer.cs">
       <DependentUpon>UC_Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_Modify.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Modify.Designer.cs">
+      <DependentUpon>UC_Modify.cs</DependentUpon>
+    </Compile>
     <Compile Include="Withdrawl_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +153,9 @@
     </Compile>
     <EmbeddedResource Include="About_form.resx">
       <DependentUpon>About_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="About_Us_Form.resx">
+      <DependentUpon>About_Us_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Attendance_Form.resx">
       <DependentUpon>Attendance_Form.cs</DependentUpon>
@@ -176,11 +197,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UC_Employee_Data.resx">
+      <DependentUpon>UC_Employee_Data.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_GroupBox.resx">
       <DependentUpon>UC_GroupBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Menu.resx">
       <DependentUpon>UC_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Modify.resx">
+      <DependentUpon>UC_Modify.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Withdrawl_form.resx">
       <DependentUpon>Withdrawl_form.cs</DependentUpon>
@@ -199,10 +226,18 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Delete1.png" />
+    <None Include="Resources\Delete.jpg" />
+    <None Include="Resources\Add.jpg" />
+    <None Include="Resources\Update.png" />
     <None Include="bin\Debug\Images\Users-Group-icon.png" />
     <None Include="bin\Debug\Images\Project-icon.png" />
+    <Content Include="images\Add.jpg" />
+    <Content Include="images\Delete.jpg" />
+    <Content Include="images\Delete1.png" />
     <Content Include="images\Person.png" />
     <Content Include="images\Project-icon.png" />
+    <Content Include="images\Update.png" />
     <Content Include="images\Users-Group-icon.png" />
     <None Include="bin\Debug\Images\Login-in-icon.png" />
     <None Include="bin\Debug\Images\Money-2-icon.png" />
@@ -233,7 +268,7 @@
     <Content Include="images\Tech.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>

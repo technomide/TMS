@@ -17,6 +17,9 @@ namespace Technomide_Corporation
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
+            //Application.Run(new Login_Signup());
+            //Application.Run(new Owner_Form());
+
 
             do
             {
@@ -25,8 +28,8 @@ namespace Technomide_Corporation
                 if (Login_Signup.State == "Owner")
                 {
                     Application.Run(new Owner_Form());
-
                 }
+
                 else if (Login_Signup.State == "Student")
                 {
 

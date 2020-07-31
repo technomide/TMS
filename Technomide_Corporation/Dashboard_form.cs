@@ -62,7 +62,7 @@ namespace Technomide_Corporation
 
             UC_Show_Today_Expense.label_function_name.Text = "Today Expense";
             UC_Show_Today_Expense.label_count.Text = DashBoard_Data("exec Total_Expense_Today '"+DateTime.Now.ToString()+"' ");
-         
+
             string startMonth = DateTime.Now.Year.ToString() + "-" + DateTime.Now.Month.ToString() +"-"+ "01";
             string endMonth = DateTime.Now.Year.ToString() + "-" + DateTime.Now.Month.ToString() + "-" + "31";
 
@@ -104,9 +104,20 @@ namespace Technomide_Corporation
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
                 Database_Connection.con.Close();
-            
+
 
                     return dt.Rows[0][0].ToString();
         }
+            SqlCommand dbCommand = new SqlCommand(q, Database_Connection.con);
+            Database_Connection.con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter(dbCommand);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            Database_Connection.con.Close();
+
+            return dt.Rows[0][0].ToString();
+        }
+
     }
 }
